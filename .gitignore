@@ -1,32 +1,28 @@
-# Prerequisites
-*.d
+import java.util.Scanner;
+public class Solution {
+            public static String[] strings;
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+            public static void main(String[] args) {
+                Scanner sc = new Scanner(System.in);
+                strings = new String[6];
+                String a;
+                for (int i = 0; i < strings.length; i++) {
+                    strings[i] = sc.nextLine();
+                }
+                for (int i = 5; i > 0; i--) {
+                    if (strings[i] != null) {
+                        a = strings[i];
+                    } else continue;
+                    for (int b = i - 1; b >= 0; b--) {
+                        if ((strings[b] != null) && (strings[b].equals(a))) {
+                            strings[b] = null;
+                            strings[i] = null;
+                        }
+                    }
+                }
+                for (int i = 0; i < strings.length; i++) {
+                    System.out.print(strings[i] + ", ");
+                }
+            }
+        }
 
-# Precompiled Headers
-*.gchdbvsfgb
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
