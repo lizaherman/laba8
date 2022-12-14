@@ -9,8 +9,8 @@ public class Solution {
                 for (int i = 0; i < strings.length; i++) {
                     strings[i] = sc.nextLine();
                 }
-                for (int i = 5; i > 0; i--) {
-                    if (strings[i] != null) {
+                for (int i = 5; i > 0; i--)
+          
                         a = strings[i];
                     } else continue;
                     for (int b = i - 1; b >= 0; b--) {
