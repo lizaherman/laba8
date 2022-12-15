@@ -16,6 +16,7 @@ public class Solution {
                     for (int b = i - 1; b >= 0; b--) {
                         if ((strings[b] != null) && (strings[b].equals(a))) {
                             strings[b] = null;
+                            ииоуиоимим
                             strings[i] = null;
                         }
                     }
